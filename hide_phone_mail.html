@@ -1,0 +1,21 @@
+<style>
+.hide-mail:after {
+    content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+  }
+  .hide-phone:before {
+      content: attr(data-tel);
+  }
+</style>
+<span class="dashicons dashicons-email-alt"></span>
+<a href="#" class="hide-mail" 
+data-name="myEmail" 
+data-domain="gmail" 
+data-tld="com" 
+onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+</a>
+</br>
+<span class="dashicons dashicons-phone"></span>
+<a href="#" class="hide-phone" 
+data-tel="+123 456 789"
+onclick="window.location.href = 'tel:' + this.dataset.tel; return false;">
+</a>
