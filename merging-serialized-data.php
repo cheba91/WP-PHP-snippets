@@ -14,7 +14,7 @@ function replace_links($arr)
 {
     if (is_array($arr)) {
         foreach ($arr as &$row) {
-            $pattern = '/(uploads\/20[0-2][0-22]\/(?:0[1-9]|1[0-2])\/.*?)/';
+            $pattern = '/(uploads\/20[0-2][0-9]\/(?:0[1-9]|1[0-2])\/.*?)/';
             $row = preg_replace($pattern, 'uploads/2022/05/', $row);
             $row = str_replace(['https://url.com', 'https://www.url.com'], '', $row);
         }
